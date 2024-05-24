@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>All Articles</h2>
+
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title, "articles/#{article.id}" %>
+      <%=
+          link_to "Delete", "articles/#{article.id}",
+          data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
+    </li>
+  <% end %>
+  <br>
+  <%= link_to "Create new article", "/articles/new" %>
+</div>

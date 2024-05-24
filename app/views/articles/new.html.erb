@@ -1,0 +1,11 @@
+<h2>Create New Article</h2>
+
+<%= form_with model: @article do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit %>
+<% end %>
+<br>
+<%= link_to "Back to articles", "/articles" %>
